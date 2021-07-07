@@ -86,13 +86,13 @@
       ];
       const header = React.createElement(
         "nav",
-        { className: "navbar navbar-light bg-warning" },
+        { className: "navbar navbar-light bg-warning", key: "header" },
         React.createElement(
           "div",
-          { className: "container" },
+          { className: "container", key: "container" },
           React.createElement(
             "a",
-            { className: "navbar-brand text-center", href: "#" },
+            { className: "navbar-brand text-center", href: "#", key: "logo" },
             React.createElement("img", {
               src: "assets/imgs/japan-fuji-icon.png",
               alt: "Logo",
@@ -103,8 +103,8 @@
       );
       const body = React.createElement(
         "div",
-        { className: "row justify-content-center text-center" },
-        React.createElement("h1", null, "Lista de animes"),
+        { className: "row justify-content-center text-center", key: "body" },
+        React.createElement("h1", { key: "titlePage" }, "Lista de animes"),
         animes.map((anime, i) =>
           React.createElement(
             "div",
